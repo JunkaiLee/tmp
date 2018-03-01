@@ -1,0 +1,27 @@
+From 23c47934f9b138d27e7f55638591e36c9bf5d22a Mon Sep 17 00:00:00 2001
+From: "junkai.li" <junkai.li@sky-data.cn>
+Date: Thu, 1 Mar 2018 15:31:50 +0800
+Subject: [PATCH] modify h2o dockerfile
+
+---
+ scheduler/docker/h2o/Dockerfile | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/scheduler/docker/h2o/Dockerfile b/scheduler/docker/h2o/Dockerfile
+index 947b8d5..4dd847e 100644
+--- a/scheduler/docker/h2o/Dockerfile
++++ b/scheduler/docker/h2o/Dockerfile
+@@ -5,7 +5,7 @@ FROM opsh2oai/h2o-deepwater:latest
+ MAINTAINER WeiJia.Liu "weijia.liu@sky-data.cn"
+ 
+ # Add run.sh and set entrypoint
+-ADD run.sh /usr/local
++ADD pkgs/run.sh /usr/local
+ RUN chmod a+x /usr/local/run.sh
+ 
+-ENTRYPOINT ["/bin/bash", "/usr/local/run.sh"]
+\ No newline at end of file
++ENTRYPOINT ["/bin/bash", "/usr/local/run.sh"]
+-- 
+1.8.3.1
+
