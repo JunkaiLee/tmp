@@ -1,17 +1,22 @@
-From 23c47934f9b138d27e7f55638591e36c9bf5d22a Mon Sep 17 00:00:00 2001
+From e45e531aa955c0ea6c4fc3278c2695d2e7ff33f9 Mon Sep 17 00:00:00 2001
 From: "junkai.li" <junkai.li@sky-data.cn>
-Date: Thu, 1 Mar 2018 15:31:50 +0800
-Subject: [PATCH] modify h2o dockerfile
+Date: Fri, 2 Mar 2018 14:32:42 +0800
+Subject: [PATCH] Modify H2O Dockerfile
 
 ---
- scheduler/docker/h2o/Dockerfile | 4 ++--
- 1 file changed, 2 insertions(+), 2 deletions(-)
+ scheduler/docker/h2o/Dockerfile | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
 
 diff --git a/scheduler/docker/h2o/Dockerfile b/scheduler/docker/h2o/Dockerfile
-index 947b8d5..4dd847e 100644
+index 947b8d5..6a2ee8d 100644
 --- a/scheduler/docker/h2o/Dockerfile
 +++ b/scheduler/docker/h2o/Dockerfile
-@@ -5,7 +5,7 @@ FROM opsh2oai/h2o-deepwater:latest
+@@ -1,11 +1,11 @@
+ # Pull base image
+ # build docker image name : skydiscovery_py2.7_tf1.2.0_cpu:1.0
+-FROM opsh2oai/h2o-deepwater:latest
++FROM 192.168.20.38/skyaxe/h2o_deepwater:3.0
+ 
  MAINTAINER WeiJia.Liu "weijia.liu@sky-data.cn"
  
  # Add run.sh and set entrypoint
